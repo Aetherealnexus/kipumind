@@ -1,0 +1,261 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f1115;
+    color: #e5e7eb;
+    line-height: 1.7;
+    padding: 40px 20px;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 30px;
+}
+
+/* PARAGRAPHS & TEXT */
+p {
+    font-size: 1rem;
+    margin: 12px 0;
+    color: #d1d5db;
+}
+
+/* LINKS */
+a {
+    color: #67e8f9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ICONS */
+i {
+    margin-right: 8px;
+    color: #67e8f9;
+}
+
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* HEADER */
+.header-content {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: #94a3b8;
+}
+
+/* LISTS */
+ul, ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+    padding-left: 6px;
+}
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+    color: #cbd5e1;
+}
+
+th {
+    background-color: rgba(103, 232, 249, 0.1);
+    color: #67e8f9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* PROFILE SECTION */
+.profile-section .profile-content {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px 0 10px;
+    margin-top: 80px;
+    color: #6b7280;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+}
+
+.footer i {
+    color: #67e8f9;
+}
+
+/* GLOW EFFECTS */
+section h2, section h3 {
+    position: relative;
+}
+
+section h2::after,
+section h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 60px;
+    background: linear-gradient(90deg, #67e8f9, #3b82f6);
+    border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .header-content {
+        padding: 0 10px;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    body {
+        padding: 20px 16px;
+    }
+}
+
+
+/* Scroll Reveal Animation */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+section.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Icon Pulse Hover */
+.pulse {
+    animation: pulse-glow 1s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0% {
+        text-shadow: 0 0 0px #67e8f9;
+    }
+    50% {
+        text-shadow: 0 0 8px #67e8f9;
+    }
+    100% {
+        text-shadow: 0 0 0px #67e8f9;
+    }
+}
+
+
+.profile-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.profile-image img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 100px;
+    border: 2px solid rgba(103, 232, 249, 0.4);
+    box-shadow: 0 0 15px rgba(103, 232, 249, 0.1);
+}
+
+.profile-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+
+.product-hero {
+    text-align: center;
+    margin: 60px auto;
+    padding: 20px;
+    max-width: 960px;
+}
+
+.product-hero img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-hero img:hover {
+    transform: scale(1.02);
+}
